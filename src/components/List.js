@@ -17,10 +17,14 @@ export default class List extends Component {
       .then(res => {
         const animes = res.data.results;
         this.setState({ animes });
-        // console.log(this.state.animes);
+        console.log(this.state.animes);
+      })
+      .catch(err => {
+        console.error(err);
       });
   }
   render() {
+
     return (
       <div className="list">
         {this.state.animes.map(anime => (
@@ -28,14 +32,6 @@ export default class List extends Component {
             key={anime.mal_id}
             to={{
               pathname: "/detail/" + anime.mal_id,
-              state: {
-                title: anime.title,
-                imgSrc: anime.image_url,
-                type: anime.type,
-                episodes: anime.episodes,
-                rating: anime.score,
-                description: anime.synopsis
-              }
             }}
           >
             <Card
