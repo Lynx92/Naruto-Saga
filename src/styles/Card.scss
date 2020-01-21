@@ -1,0 +1,19 @@
+.card {
+  border: solid 3px red;
+  margin: 1rem;
+  border-radius: 1rem;
+
+  p {
+    max-width: 15rem;
+  }
+
+  img {
+    border-radius: 1rem;
+    min-width: 10rem;
+    height: auto;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
