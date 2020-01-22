@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../styles/Detail.scss";
+import { Link } from "react-router-dom";
 
 export default class Detail extends Component {
   constructor(props) {
@@ -11,17 +12,9 @@ export default class Detail extends Component {
     };
   }
   componentDidMount() {
-    let config = {
-      headers: {
-        SameSite: "None",
-        Secure: "True",
-      }
-    };
-    // "Set-Cookie", "HttpOnly;Secure;SameSite=Strict"
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/anime/${this.state.id}`,
-        config
+        `https://cors-anywhere.herokuapp.com/https://api.jikan.moe/v3/anime/${this.state.id}`
       )
       .then(res => {
         const info = res.data;
@@ -36,13 +29,24 @@ export default class Detail extends Component {
   render() {
     return (
       <div className="detail">
-        <img src={this.state.info.image_url} alt="poster" />
-        <video src={this.state.info.trailer_url} />
-        <p>{this.state.info.title}</p>
-        <p>{this.state.info.type}</p>
-        <p>{this.state.info.episodes}</p>
-        <p>{this.state.info.score}</p>
-        <p>{this.state.info.synopsis}</p>
+        <div className="high-part">
+          <div>
+            <img src={this.state.info.image_url} alt="poster" />
+          </div>
+          <div className="infos">
+            <p>{this.state.info.title}</p>
+            <p>{this.state.info.type}</p>
+            <p>Episodes: {this.state.info.episodes}</p>
+            <p>Rating: {this.state.info.score}</p>
+          </div>
+        </div>
+        <div className="low-part">
+          <p>Synopsis:</p>
+          <p>{this.state.info.synopsis}</p>
+          <Link to="/list">
+            <button>Back to List</button>
+          </Link>
+        </div>
       </div>
     );
   }
