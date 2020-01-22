@@ -1,13 +1,23 @@
 import React, { Component } from "react";
-import '../styles/Card.scss'
+import star from "../assets/ratingStar.png";
+import "../styles/Card.scss";
 
 export default class Card extends Component {
   render() {
     return (
       <div className="card">
-        <p>{this.props.title}</p>
         <img src={this.props.imgSrc} alt="poster" />
-        <p>{this.props.rating}</p>
+
+        <div className="rating-cont">
+          <img src={star} alt="rating" />
+          <span>{this.props.rating.toFixed(1)}</span>
+        </div>
+
+        <div className="blur">
+          <div className="specs">
+            <p>{this.props.title}</p>
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,20 +1,46 @@
 .card {
-  border: solid 3px lightgreen;
-  margin: 1rem;
-  border-radius: 1rem;
-  padding: .5rem;
-
-  p {
-    max-width: 15rem;
+  margin: 1.5rem;
+  box-shadow: 3px 2px 8px 2px black;
+  opacity: 0.8;
+  position: relative;
+  &:hover {
+    opacity: 1;
   }
 
-  img {
-    border-radius: 1rem;
-    max-width: 10rem;
-    height: auto;
-    opacity: 0.8;
-    &:hover {
-      opacity: 1;
+  .blur {
+    background-color: red;
+    z-index: 99;
+    .specs {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(245, 245, 245, 0.7);
+      width: 100%;
+
+      p {
+        margin: .5rem;
+        padding: .3rem;
+        font-weight: bold;
+        color:bisque;
+      }
+    }
+  }
+
+  .rating-cont {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+
+    img {
+      width: 4rem;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 37%;
+      bottom: 50%;
+      font-size: 1rem;
     }
   }
 }

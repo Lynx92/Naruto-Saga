@@ -24,14 +24,13 @@ export default class List extends Component {
       });
   }
   render() {
-
     return (
       <div className="list">
         {this.state.animes.map(anime => (
           <Link
             key={anime.mal_id}
             to={{
-              pathname: "/detail/" + anime.mal_id,
+              pathname: "/detail/" + anime.mal_id
             }}
           >
             <Card
