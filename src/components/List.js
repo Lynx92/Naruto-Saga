@@ -17,7 +17,7 @@ export default class List extends Component {
       .then(res => {
         const animes = res.data.results;
         this.setState({ animes });
-        console.log(this.state.animes);
+        // console.log(this.state.animes);
       })
       .catch(err => {
         console.error(err);

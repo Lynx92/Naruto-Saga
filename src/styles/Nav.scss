@@ -1,19 +1,21 @@
 .nav {
+  border-radius: 1rem;
   display: flex;
-  margin-bottom: 2rem;
+  // height: 1rem;
   a {
+    transition: all 1s ease-in-out;
     opacity: 0.8;
-
+    
     &:hover {
       opacity: 1;
       animation: 0.7s ease-out shake infinite;
     }
     img {
-      width: 3rem;
+      width: 2.5rem;
       height: auto;
       border-radius: 1rem;
       margin: 1rem;
-      border: 3px solid lightslategray;
+      border: 1px solid lightslategray;
       box-shadow: 3px 2px 8px 2px black;
     }
   }

@@ -8,7 +8,7 @@ export default class Nav extends Component {
     return (
       <div className="nav">
         <Link to="/home">
-          <img className="shaking" src={homeLogo} alt="logo" />
+          <img src={homeLogo} alt="logo" />
         </Link>
       </div>
     );

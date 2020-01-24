@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+// import BG from "../assets/homeBG.png";
 import "../styles/Home.scss";
 
 export default class Home extends Component {
@@ -7,8 +8,10 @@ export default class Home extends Component {
     return (
       <div className="home">
         <Link to="/list">
-          <h1>Naruto Saga</h1>
-          <button>Ir a la lista</button>
+          <div className="enter">
+            <h1>Naruto Saga</h1>
+            <p>Click Here!</p>
+          </div>
         </Link>
       </div>
     );

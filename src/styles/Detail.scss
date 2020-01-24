@@ -3,17 +3,21 @@
   flex-direction: column;
   align-items: center;
   margin: 5rem;
+  color: whitesmoke;
+  background-color: #ff943d;
+
   .high-part {
     padding: 2rem;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+
     img {
-      border: 3px solid lightcoral;
       border-radius: 1rem;
       padding: 0.3rem;
       box-shadow: 3px 2px 8px 2px black;
     }
+
     .infos {
       text-align: center;
 
@@ -23,8 +27,6 @@
     }
   }
 
-  $vav: black;
-  
   .low-part {
     padding: 2rem;
     display: flex;
@@ -35,12 +37,17 @@
     p:nth-of-type(2) {
       line-height: 2;
     }
-    button {
-      padding: 1rem;
-      border-radius: 1rem;
-      margin-top: 5rem;
-      font-family: "Montserrat", sans-serif;
-      box-shadow: 3px 2px 8px 2px black;
+  }
+  button {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 3px 2px 8px 2px black;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
 }

@@ -19,7 +19,7 @@ export default class Detail extends Component {
       .then(res => {
         const info = res.data;
         this.setState({ info });
-        console.log(this.state.info);
+        // console.log(this.state.info);
       })
       .catch(err => {
         console.error(err);
@@ -43,10 +43,10 @@ export default class Detail extends Component {
         <div className="low-part">
           <p>Synopsis:</p>
           <p>{this.state.info.synopsis}</p>
-          <Link to="/list">
-            <button>Back to List</button>
-          </Link>
         </div>
+        <button>
+          <Link to="/list">Back to List </Link>
+        </button>
       </div>
     );
   }
