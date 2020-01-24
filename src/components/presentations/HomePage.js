@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import BG from "../assets/homeBG.png";
-import "../styles/Home.scss";
+import "../../styles/Home.scss";
 
 export default class Home extends Component {
   render() {

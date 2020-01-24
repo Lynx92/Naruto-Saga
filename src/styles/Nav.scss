@@ -1,15 +1,19 @@
 .nav {
   border-radius: 1rem;
   display: flex;
-  // height: 1rem;
   a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: aliceblue;
     transition: all 1s ease-in-out;
     opacity: 0.8;
-    
+
     &:hover {
       opacity: 1;
       animation: 0.7s ease-out shake infinite;
     }
+
     img {
       width: 2.5rem;
       height: auto;

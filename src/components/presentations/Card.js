@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import star from "../assets/ratingStar.png";
-import "../styles/Card.scss";
+import star from "../../assets/ratingStar.png";
+import "../../styles/Card.scss";
 
 export default class Card extends Component {
   render() {

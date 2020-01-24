@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import homeLogo from "../assets/homeLogo.jpg";
-import "../styles/Nav.scss";
+import homeLogo from "../../assets/homeLogo.jpg";
+import "../../styles/Nav.scss";
 
 export default class Nav extends Component {
   render() {
@@ -9,6 +9,7 @@ export default class Nav extends Component {
       <div className="nav">
         <Link to="/home">
           <img src={homeLogo} alt="logo" />
+          <span>Naruto Saga</span>
         </Link>
       </div>
     );
