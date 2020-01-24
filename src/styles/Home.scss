@@ -6,6 +6,8 @@
   height: 100%;
   border-radius: 1rem;
   overflow: hidden;
+  transition: all 1s ease-out;
+  animation: fadeIn 1s;
 
   a {
     text-decoration: none;
@@ -22,6 +24,7 @@
     background-color: lightcoral;
     opacity: 0.8;
     transition: all 1s ease-out;
+    animation: fadeInUp 1s;
 
     h1 {
       font-size: 2rem;
@@ -42,4 +45,27 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

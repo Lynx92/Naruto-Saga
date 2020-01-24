@@ -3,6 +3,9 @@
   box-shadow: 3px 2px 8px 2px black;
   opacity: 0.8;
   position: relative;
+  transition: all 1s ease-in-out;
+  animation: zoomIn 1s;
+
   &:hover {
     opacity: 1;
   }
@@ -42,5 +45,16 @@
       bottom: 50%;
       font-size: 1rem;
     }
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
   }
 }
